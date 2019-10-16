@@ -177,8 +177,18 @@ tidy_data <-
   ## Sort the data in a sensible way
   arrange(data_set, subject, activity, sensor, measure, dimension)
 
+write.table(tidy_data, file = "tidy_data.txt", row.names = FALSE)
+
+## "From the data set in step 4, creates a second, independent tidy data set
+## with the average of each variable for each activity and each subject."
+
+submit_data <-
+  tidy_data %>% 
+  group_by(subject, activity, sensor, measure, dimension) %>% 
+  summarise(mean = mean(value), n = n())
+
 ## Save the data
 
-write.table(tidy_data, file = "tidy_data.txt", row.names = FALSE)
+write.table(submit_data, file = "submit_data.txt", row.names = FALSE)
 
 ## ============================================================

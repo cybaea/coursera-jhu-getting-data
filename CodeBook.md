@@ -2,11 +2,9 @@
 
 This is the code book for the tidy data set created by the [run_analysis.R](run_analysis.R) script for this course project. See the file [README.md](README.md) for documentation of the script and the study design.
 
-The tidy data is written to the file [tidy_data.txt](tidy_data.txt). The format is that produced by [write.table](https://www.rdocumentation.org/packages/utils/versions/3.6.1/topics/write.table) with the `row.names = FALSE` argument.
+The submission data is written to the file [submit_data.txt](submit_data.txt). The format is that produced by [write.table](https://www.rdocumentation.org/packages/utils/versions/3.6.1/topics/write.table) with the `row.names = FALSE` argument.
 
 The data has 7 columns
-
-1.  **data_set**: this containts the value "test" or "train" to show if the data is from the test or training data set, respectively.
 
 2.  **subject**: this is the identifier for the subject under observation. There are 30 subjects numbered from 1 to 30.
 
@@ -18,12 +16,14 @@ The data has 7 columns
 
 6.  **dimension**: Many of the sensor metrics have three values, one for each spatial dimention which is denoted by "x", "y", and "z" in this column. The nine 'magnitude' sensors (names ending with "Mag") only provide one value and these have "" in this column.
 
-7.  **value**: this is the measured value.
+7.  **mean**: this is the mean value of the data for the subject, activity, sensor, measure, and dimension
 
     * The original data has all values normalised and bounded to [-1,1] and we have not altered the values.
     * The gyroscope ("Gyro") measures angular velocity while the accelerometer provided tri-axial and total acceleration. 
     * In the original data a Fast Fourier Transform (FFT) was applied to some of the signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.
 
+
+8.  **n**: the number of observations used to calculate the mean.
 
 For more information about the underlying data, see the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) on the UCI Machine Learning Repository.
 
