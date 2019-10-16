@@ -22,4 +22,9 @@ Note that we have no information about what selection or processing the lecturer
 
 ## Running the code
 
-Simply run the script `run_analysis.R` to produce the tidy dataset.
+Simply run the script `run_analysis.R` to produce the tidy dataset in the file [tidy_data.txt](tidy_data.txt). Re-running the script will overwrite this file.
+
+The tidy data is described in the [CodeBook.md](CodeBook.md) file.
+
+Note that this script connects to the internet to download the datafile if (and only if) a file named `UCI HAR Dataset.zip` is not present in the current directory. In normal usage this means the file is only downloaded once from the internet.
+
