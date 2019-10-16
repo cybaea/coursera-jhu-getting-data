@@ -24,3 +24,7 @@ The data has 7 columns
     * The gyroscope ("Gyro") measures angular velocity while the accelerometer provided tri-axial and total acceleration. 
     * In the original data a Fast Fourier Transform (FFT) was applied to some of the signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.
 
+
+For more information about the underlying data, see the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) on the UCI Machine Learning Repository.
+
+
